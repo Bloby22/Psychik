@@ -34,7 +34,7 @@ public class Psychik extends JavaPlugin {
         if (!getDataFolder().exists()) getDataFolder().mkdirs();
         zoneManager = new ZoneManager(this);
         zoneManager.loadZones();
-        getCommand("zone").setExecutor(new ZoneCommand(this));
+        getCommand("psychik").setExecutor(new ZoneCommand(this));
         getServer().getPluginManager().registerEvents(new MovementListener(this), this);
         getLogger().info("Psychik enabled!");
     }
@@ -215,17 +215,17 @@ public class Psychik extends JavaPlugin {
         }
         
         private void sendHelp(CommandSender s) {
-            s.sendMessage(ChatColor.GOLD + "=== Psychik Zones ===");
-            s.sendMessage(ChatColor.YELLOW + "/zone create <n> <circle|square> <size>");
-            s.sendMessage(ChatColor.YELLOW + "/zone delete <n>");
-            s.sendMessage(ChatColor.YELLOW + "/zone edit <n> <prop> <val>");
-            s.sendMessage(ChatColor.YELLOW + "/zone list");
-            s.sendMessage(ChatColor.YELLOW + "/zone info <n>");
+            s.sendMessage(ChatColor.GOLD + "=== Psychik Help ===");
+            s.sendMessage(ChatColor.YELLOW + "/psychik create <n> <circle|square> <size>");
+            s.sendMessage(ChatColor.YELLOW + "/psychik delete <n>");
+            s.sendMessage(ChatColor.YELLOW + "/psychik edit <n> <prop> <val>");
+            s.sendMessage(ChatColor.YELLOW + "/psychik list");
+            s.sendMessage(ChatColor.YELLOW + "/psychik info <n>");
         }
         
         private boolean create(CommandSender s, String[] a) {
             if (!(s instanceof Player)) { s.sendMessage(ChatColor.RED + "Players only."); return true; }
-            if (a.length < 4) { s.sendMessage(ChatColor.RED + "Usage: /zone create <n> <circle|square> <size>"); return true; }
+            if (a.length < 4) { s.sendMessage(ChatColor.RED + "Usage: /psychik create <n> <circle|square> <size>"); return true; }
             Player p = (Player)s;
             String n = a[1];
             double sz;
@@ -239,7 +239,7 @@ public class Psychik extends JavaPlugin {
         }
         
         private boolean delete(CommandSender s, String[] a) {
-            if (a.length < 2) { s.sendMessage(ChatColor.RED + "Usage: /zone delete <n>"); return true; }
+            if (a.length < 2) { s.sendMessage(ChatColor.RED + "Usage: /psychik delete <n>"); return true; }
             if (plugin.getZoneManager().getZone(a[1]) == null) { s.sendMessage(ChatColor.RED + "Zone not found."); return true; }
             plugin.getZoneManager().removeZone(a[1]);
             s.sendMessage(ChatColor.GREEN + "Zone deleted.");
@@ -247,7 +247,7 @@ public class Psychik extends JavaPlugin {
         }
         
         private boolean edit(CommandSender s, String[] a) {
-            if (a.length < 4) { s.sendMessage(ChatColor.RED + "Usage: /zone edit <n> <prop> <val>"); return true; }
+            if (a.length < 4) { s.sendMessage(ChatColor.RED + "Usage: /psychik edit <n> <prop> <val>"); return true; }
             PsychikZone z = plugin.getZoneManager().getZone(a[1]);
             if (z == null) { s.sendMessage(ChatColor.RED + "Zone not found."); return true; }
             double v;
@@ -272,7 +272,7 @@ public class Psychik extends JavaPlugin {
         }
         
         private boolean info(CommandSender s, String[] a) {
-            if (a.length < 2) { s.sendMessage(ChatColor.RED + "Usage: /zone info <n>"); return true; }
+            if (a.length < 2) { s.sendMessage(ChatColor.RED + "Usage: /psychik info <n>"); return true; }
             PsychikZone z = plugin.getZoneManager().getZone(a[1]);
             if (z == null) { s.sendMessage(ChatColor.RED + "Zone not found."); return true; }
             s.sendMessage(ChatColor.GOLD + "Zone: " + z.getName());
