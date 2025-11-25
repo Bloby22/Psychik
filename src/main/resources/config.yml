@@ -1,0 +1,169 @@
+# General Settings
+settings:
+  # Enable debug messages in console
+  debug: false
+
+  # Auto-save zones interval (in minutes, 0 to disable)
+  auto-save-interval: 5
+
+  # Check for updates on startup
+  check-updates: true
+
+# Zone Settings
+zones:
+  # Maximum number of zones per world
+  max-zones-per-world: 50
+
+  # Maximum zone size (radius/half-width in blocks)
+  max-zone-size: 500
+
+  # Minimum zone size (radius/half-width in blocks)
+  min-zone-size: 1
+
+  # Allow overlapping zones
+  allow-overlap: true
+
+  # Priority when player is in multiple zones (first, last, largest, smallest)
+  overlap-priority: first
+
+# Effect Settings
+effects:
+  # Gravity settings
+  gravity:
+    enabled: true
+    min-multiplier: 0.0
+    max-multiplier: 3.0
+
+  # Speed settings
+  speed:
+    enabled: true
+    min-multiplier: 0.0
+    max-multiplier: 5.0
+
+  # Jump settings
+  jump:
+    enabled: true
+    min-multiplier: 0.0
+    max-multiplier: 3.0
+
+  # Knockback settings
+  knockback:
+    enabled: true
+    min-multiplier: 0.0
+    max-multiplier: 5.0
+
+  # Stamina drain settings
+  stamina:
+    enabled: true
+    min-drain: 0.0
+    max-drain: 20.0
+
+# Notification Settings
+notifications:
+  # Send message when entering zone
+  entry-message: true
+
+  # Send message when leaving zone
+  exit-message: true
+
+  # Show effect details on entry
+  show-effects: true
+
+  # Message format
+  entry-format: "&aEntered zone: &f%zone%"
+  exit-format: "&7Left zone: &f%zone%"
+
+  # Sound effects (set to "" to disable)
+  entry-sound: "BLOCK_NOTE_BLOCK_PLING"
+  exit-sound: "BLOCK_NOTE_BLOCK_BASS"
+
+  # Sound volume and pitch
+  sound-volume: 0.5
+  sound-pitch: 1.0
+
+# Performance Settings
+performance:
+  # Movement check interval (in ticks, 1 = every tick)
+  movement-check-interval: 1
+
+  # Distance check optimization (check only nearby zones)
+  distance-optimization: true
+
+  # Maximum distance to check for zones (in blocks)
+  max-check-distance: 100
+
+  # Cache player zones (improves performance)
+  cache-player-zones: true
+
+# Permissions Settings
+permissions:
+  # Require permission to enter zones
+  require-entry-permission: false
+
+  # Permission format: psychik.zone.enter.<zonename>
+  entry-permission-format: "psychik.zone.enter.%zone%"
+
+# Visual Settings
+visual:
+  # Enable particle effects at zone borders
+  border-particles: false
+
+  # Particle type for borders
+  border-particle-type: "REDSTONE"
+
+  # Particle density (particles per block)
+  particle-density: 0.5
+
+  # Show particles interval (in seconds)
+  particle-interval: 2
+
+# Backup Settings
+backup:
+  # Enable automatic backups
+  enabled: true
+
+  # Backup interval (in hours)
+  interval: 24
+
+  # Keep last X backups
+  keep-backups: 5
+
+  # Backup folder name
+  folder: "backups"
+
+# Default Zone Values
+defaults:
+  # Default shape when not specified
+  shape: "CIRCLE"
+
+  # Default size when not specified
+  size: 20.0
+
+  # Default multipliers
+  gravity: 1.0
+  speed: 1.0
+  jump: 1.0
+  knockback: 1.0
+  stamina: 0.0
+
+# World Settings
+worlds:
+  # Worlds where zones are enabled
+  enabled-worlds:
+    - "world"
+    - "world_nether"
+    - "world_the_end"
+
+  # Disable zones in specific worlds
+  disabled-worlds: []
+
+# Advanced Settings
+advanced:
+  # Use async operations for zone checks
+  async-zone-checks: false
+
+  # Thread pool size for async operations
+  thread-pool-size: 2
+
+  # Enable metrics/statistics collection
+  metrics: true
