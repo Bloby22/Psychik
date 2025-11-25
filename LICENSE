@@ -2,14 +2,34 @@ Copyright (c) 2025 Bloby
 
 All rights reserved.
 
-Permission is hereby granted to use this plugin solely on Minecraft servers.  
-You may use this plugin for personal or commercial purposes without modification.
+This license governs the use of the Psychik plugin, including all its source code, binaries, configuration files, and resources. By downloading, installing, or using this plugin, you agree to the terms outlined below.
 
-You are NOT allowed to:  
-- Modify, edit, or adapt the plugin in any way  
-- Distribute modified versions of the plugin  
-- Use the plugin code in other projects or plugins  
+1. **Usage Rights**
+   - You are permitted to use the Psychik plugin on any Minecraft server, personal or commercial, in its unmodified form.
+   - You may configure the plugin using its built-in configuration options, commands, and settings as intended by the author.
 
-Redistribution of the original, unmodified plugin is allowed only with credit to the author: Bloby.  
+2. **Prohibited Actions**
+   - You may NOT modify, edit, reverse-engineer, decompile, or adapt the plugin in any way.
+   - You may NOT distribute modified or derivative versions of the plugin.
+   - You may NOT include the plugin or its code in other software projects or plugins without explicit permission from the author.
 
-This license applies to the Psychik plugin and all its source code, binaries, and resources.
+3. **Redistribution**
+   - Redistribution of the plugin is allowed ONLY if it remains fully unmodified and credit is given to the original author, Bloby.
+   - No one is allowed to claim ownership, authorship, or copyright over the plugin or any part of it.
+
+4. **Intellectual Property**
+   - All intellectual property, including copyrights, trademarks, and trade secrets, are owned solely by Bloby.
+   - No rights are transferred other than the limited permission to use the plugin as outlined in this license.
+
+5. **Disclaimer of Liability**
+   - The plugin is provided "as-is" without any warranties, express or implied.
+   - Bloby shall not be liable for any damages, data loss, server crashes, or other issues arising from the use or misuse of this plugin.
+
+6. **Termination**
+   - This license is automatically terminated if any of the prohibited actions are undertaken.
+   - Upon termination, you must immediately stop using the plugin and delete all copies from your systems.
+
+7. **Governing Law**
+   - This license is governed by the laws of the jurisdiction of the author and shall be interpreted accordingly.
+
+By using the Psychik plugin, you explicitly agree to comply with all the terms outlined in this license. Failure to adhere to these terms constitutes a violation of intellectual property rights and may result in legal action.
